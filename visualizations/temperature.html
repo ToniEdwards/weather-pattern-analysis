@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="..\assets\css\bootstrap.css">
+    <title>Atlantis Temperatures</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="..\index.html">Atlantis</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">                         
+              <li class="nav-item">
+                <a class="nav-link" href="..\resources\comparison.html">Comparison</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="..\resources\data.html">Data</a>
+              </li>
+              <li class="nav-item dropdown me-sm-2">
+                <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Visualization</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="temperature.html">Max Temperature</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="humidity.html">Humidity</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="clouds.html">Cloudiness</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="wind.html">Wind Speed</a>                 
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h1 class="text-muted">Maximum Temperature Analysis </h1>
+      <h3 class="text-muted">Explore the visual analysis of global weather maximum temperatures across the Northern and Southern Hemispheres</h3>
+      </h1>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Scatter Plot (Northern & Southern Hemispheres)
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This chart plots the percentage of maximum temperatures at varying equitorial latitudes.</strong> 
+              <p>We are able to see that cloud coverage increases at about 20 degrees latitude in both the Northern and Sourthern hemispheres. However, beyond the Northern proximity to the equator there apears to be an even distribution of cloud coverage.</p>
+              <img src="C:\Users\td_ed\Documents\Homework\web-design-challenge\assets\images\lat-temp-plot.png" alt="Latitude Vs Clouds Plot"/>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Northern Hemisphere Linear Regression
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This chart plots the linear regression correlation of latitude to maximum temperature within the Northern Hemisphere.</strong>
+              <p>We are able to see that in the Northern Hemisphere there is no correlation between latitude and cloud coverage percentage. Meaning that cities located at various proximities to the equator have even distribution percentages of cloud coverage across these latitudes.</p>
+              <img src="C:\Users\td_ed\Documents\Homework\web-design-challenge\assets\images\northern-temperature-regress.png" alt="Latitude in North Regression"/>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Southern Hemisphere Linear Regression
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This chart plots the linear regression correlation of latitude to maximum temperature within the Southern Hemisphere.</strong>
+              <p>We are able to see that in the Southern Hemisphere there is a positive correlation between latitude and cloud coverage percentage. Meaning that cities which are located closer to the equator experience an increase in the percentatge of cloud coverage at these latitudes.</p>
+              <img src="C:\Users\td_ed\Documents\Homework\web-design-challenge\assets\images\southern-temperature-regress.png" alt="Latitude in South Regression"/>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
